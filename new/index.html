@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/modify.css">
+</head>
+<body>
+    
+            <h1>Password Generator</h1>
+            <div class="user">
+            <label for="Password">Password :</label>
+            <input type="text" placeholder="Password" id="main-password">
+            <button id="Generate">Generate</button></div>
+            <p>Here's Your Password<span id="wrote-password" style="margin-left: 12px;">:</span></p>
+            <button id="Select">Select</button>
+
+
+            <script>
+                const Index = "0123456789ASDFGHJKLMNBVCXZQWERTYUIOP";
+                function generatePassword(){
+                    let password = "" ;//password empty
+                    const passwordLength = 6 ;//Length of an Password
+                    for(i=0; i < passwordLength; i++ ){
+                        const randomIndex = Math.floor (Math.random() * Index.length);//Choose a random indexs from Index in Password
+                        password += Index[randomIndex];// Defining password which is empty
+                    }
+                    document.getElementById("wrote-password").textContent = password; //wrote password in paragraph
+
+                }
+                function Select(){
+                    const passwordGenrated = document.getElementById("wrote-password").textContent;
+                    const confirmSelection = confirm("Do you realy want this Password or change it");
+                    if(confirmSelection){
+                        document.getElementById("main-password").value = passwordGenrated;
+                    
+                    }
+                    
+
+
+
+
+                }
+                
+                document.getElementById("Generate").addEventListener("click", generatePassword );// click on generate to generate password 
+                
+                document.getElementById("Select").addEventListener("click", Select);//if you want to select this password click on select
+                
+
+
+
+            </script>
+
+
+
+</body>
+</html>

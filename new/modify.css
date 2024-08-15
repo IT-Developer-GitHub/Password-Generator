@@ -1,0 +1,54 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color: azure;
+}
+h1{
+    text-align: center;
+    margin-top: 225px;
+    color: brown;
+}
+input{
+    width: 175px;
+    height: 30px;
+    text-align: left;
+    color: red;
+}
+label{
+    display: inline;
+    font-size: 30px;
+    text-align: left;
+}
+#main-password{
+    font-size: 15px;
+    text-align: left;
+    align-items: left;
+    font-weight: 500;
+}
+.user{
+    text-align: center;
+}
+#Generate{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: beige;
+    border: 2px solid rgb(107, 95, 95);
+}
+p{
+    text-align: center;
+    
+}
+#Select{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: beige;
+    border: 2px solid rgb(107, 95, 95);
+    margin-left: 600px;
+}
